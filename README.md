@@ -1,5 +1,9 @@
 # Лабораторная работа №2
 
+| branch | status |
+|--------|--------|
+| development |  [![CI](https://github.com/Boryabes/lab2_cache/workflows/CI/badge.svg?branch=development)](https://github.com/Boryabes/lab2_cache/actions/runs/440982354)
+
 В большинстве современных ПК используется следующая иерархия памяти:
 | Тип | Скорость доступа | Размер |
 | - | - | - |
