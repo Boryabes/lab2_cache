@@ -2,6 +2,15 @@
 
 #include <gtest/gtest.h>
 
+#include "iostream"
+#include "tester.hpp"
 TEST(Example, EmptyTest) {
-    EXPECT_TRUE(true);
+  tester test;
+  test.setBufs();
+  test.straightTest();
+  std::cout << test;
+  test.revertTest();
+  std::cout << test;
+  test.randomTest();
+  std::cout << test;
 }
