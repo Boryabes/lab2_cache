@@ -7,3 +7,6 @@
 [submodule "tools/gate"]
 	path = tools/gate
 	url = https://github.com/hunter-packages/gate.git
+[submodule "tools/CMake-codecov"]
+	path = tools/CMake-codecov
+	url = git://github.com/RWTH-HPC/CMake-codecov.git
