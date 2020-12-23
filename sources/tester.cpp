@@ -1,5 +1,5 @@
 //
-// Copyright 2020 Boryabes <box.bern@yandex.ru
+// Copyright 2020 Boryabes <box.bern@yandex.ru>
 //
 
 #include "tester.hpp"
@@ -19,7 +19,7 @@ void tester::straightTest() {
                         //буффера делить на размер типа инт (4 байта)
     for (int i = 0; i < size / four;
          i +=
-         sixteen) {  //иду по каждому 16-му элементу, строчка 18-20 прогрев кеша
+         sixteen) {  //иду по каждому 16-му элементу, строчка 20-24 прогрев кеша
       vault = arr1[i];
     }
     auto startTime =
@@ -34,8 +34,7 @@ void tester::straightTest() {
     durationsOfTest.push_back(  //добавляю длительность эксперемента в массив
         std::chrono::duration_cast<std::chrono::microseconds>(endTime -
                                                               startTime)
-            .count() /
-        kylo1000);  //длительность одного прохода
+            .count() /kylo1000);  //длительность одного прохода
     delete[] arr1;  //удаляю этот массив чтобы он не занимал место в памяти
   }
 }
@@ -140,9 +139,9 @@ std::ostream &operator<<(std::ostream &out, tester &invest) {
 }
 
 void tester::setBufs() {
-  sizesOfBufs.push_back(sizesOfCashes[0] / 2.0 * kylo1024 * kylo1024);
-  for (int i = 1; i <= 1.5 * sizesOfCashes[2]; i *= 2) {
-    sizesOfBufs.push_back(i * kylo1024 * kylo1024);
+  sizesOfBufs.push_back(sizesOfCashes[0] / 2.0 );
+  for (int i = 1048576; i < 1.5 * sizesOfCashes[2]; i *= 2) {
+    sizesOfBufs.push_back(i);
   }
-  sizesOfBufs.push_back(sizesOfCashes[2] * 1.5 * kylo1024 * kylo1024);
+  sizesOfBufs.push_back(sizesOfCashes[2] * 1.5);
 }

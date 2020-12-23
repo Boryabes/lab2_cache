@@ -7,7 +7,7 @@ class tester {  //
  private:
   std::string varOfTest;  //вариант прохода кеша
 
-  std::vector<double> sizesOfCashes = {0.385, 2, 4};
+  std::vector<double> sizesOfCashes = {393216, 2097152, 4194304};
   std::vector<double> sizesOfBufs;  //размер массива буфферов
   std::vector<double> durationsOfTest;  //длительность каждого теста
   const int kylo1024 = 1024;
