@@ -3,30 +3,30 @@
 #define INCLUDE_TESTERCASHES_HPP_
 #include "string"
 #include "vector"
-class tester {  //
+class tester {
  private:
   std::string varOfTest;  //вариант прохода кеша
 
   std::vector<double> sizesOfCashes = {393216, 2097152, 4194304};
-  std::vector<double> sizesOfBufs;  //размер массива буфферов
-  std::vector<double> durationsOfTest;  //длительность каждого теста
+  std::vector<double> sizesOfBufs;
+  std::vector<double> durationsOfTest;
   const int kylo1024 = 1024;
   const int kylo1000 = 1000;
   const double four = 4.;
   const int sixteen = 16;
+  const int mb1 = 1048576;
 
  public:
-  void straightTest();  //прямой проход
-  void randomTest();    //рандомный проход
-  void revertTest();    //обратный проход
-  void setBufs();  //с помощью моих кешей высчитывает эксперементальные буфферы
-  friend std::ostream& operator<<(
-      std::ostream& out, tester& a);  //перегрузка операторов для вывода
-  std::string getVarOfTest();  //для доступа к приватным полям(для доступа к
-                               //варианту прохода)
-  size_t getSizeOfBufArr();  //метод для доступа к размеру массива буфферов
+  void straightTest();
+  void randomTest();
+  void revertTest();
+  void setBufs();
+  friend std::ostream& operator<<(std::ostream& out, tester& a);
+  std::string getVarOfTest();
 
-  std::stringstream getExp(int indexOfBuf);  //для вывода одного эксперемента
+  size_t getSizeOfBufArr();
+
+  std::stringstream getExp(int indexOfBuf);
   std::string getInvestigation();
 };
 #endif  // INCLUDE_TESTERCASHES_HPP_
