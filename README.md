@@ -4,6 +4,9 @@
 |--------|--------|
 | development |  [![CI](https://github.com/Boryabes/lab2_cache/workflows/CI/badge.svg?branch=development)](https://github.com/Boryabes/lab2_cache/actions/runs/440982354)
 
+Диаграмма, построенная по полученным значениям
+![Cache](./images/lab2Diagram.png)
+
 В большинстве современных ПК используется следующая иерархия памяти:
 | Тип | Скорость доступа | Размер |
 | - | - | - |
@@ -145,15 +148,15 @@ investigation:                                       |  investigaion:
   - experiment:                                      |    - experiment:
       number:                                        |        number: 1
       input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "1mb"
+        buffer_size: <размер_буфера>                 |          buffer_size: 192Kb
       results:                                       |        results:
-        duration: <продолжительность>                |          duration: "1ns"
+        duration: <продолжительность>                |          duration: 14mcs
   - experiment:                                      |    - experiment:
       number: <номер_эксперимента>                   |        number: 2
       input_data:                                    |        input_data:
-        buffer_size: <размер_буфера>                 |          buffer_size: "2mb"
+        buffer_size: <размер_буфера>                 |          buffer_size: 1024Kb
       results:                                       |        results:
-        duration: <продолжительность>                |          duration: "2ns"
+        duration: <продолжительность>                |          duration: 77mcs
                                                      |
 investigation:                                       |  investigation:
 ...                                                  |  ...

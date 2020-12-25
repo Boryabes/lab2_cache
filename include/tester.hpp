@@ -5,7 +5,7 @@
 #include "vector"
 class tester {
  private:
-  std::string varOfTest;  //вариант прохода кеша
+  std::string varOfTest;
 
   std::vector<double> sizesOfCashes = {393216, 2097152, 4194304};
   std::vector<double> sizesOfBufs;
